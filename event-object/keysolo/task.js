@@ -17,13 +17,7 @@ class Game {
   }
 
   registerEvents() {
-    document.addEventListener('keyup', function(event) {
-      if (this.currentSymbol.toLowerCase() === event.key.toLowerCase()) {
-        this.success;
-      } else {
-        this.fail;
-      }
-    })
+    document.addEventListener("keyup", (event) => (this.currentSymbol.textContent.toLowerCase() === event.key.toLowerCase()) ? this.success() : this.fail());
   }
 
   success() {
